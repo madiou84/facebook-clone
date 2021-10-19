@@ -1,164 +1,38 @@
-import React from 'react';
-import { UserCircleIcon, SearchIcon } from '@heroicons/react/solid';
+import { UserCircleIcon, SearchIcon, VideoCameraIcon } from '@heroicons/react/solid';
+import { SearchIcon as SearchIconOutline, DotsHorizontalIcon } from '@heroicons/react/outline';
 
 import {
   Nav,
   Posts,
+  Salons,
   FbIcon,
+  Layout,
   NavItem,
   Stories,
   PostItem,
   StoryForm,
   StoryItem,
+  SalongItem,
+  FixedSidbar,
+  ImageProfileUser,
+  ButtonCreateSalon,
   FormWhatWouldYouSay,
-} from '../../Shared'
+  FloatingButtonMakeMessage,
+} from '../../Shared';
+import {
+  posts,
+  users,
+  sidbarData,
+  storiesData,
+  navDimensionStyle,
+  usersInConversation } from '../../utils';
+import { capitalizeFirstLetter, classNames } from '../../Shared/helper';
 
-// const BASE_URL = window.location.host
-const navDimensionStyle = ['0 -743px', '0 -470px', '0 -638px', '0 -932px', '0 -323px', '0 -722px'];
-const storiesData = [
-  {
-    id: 1,
-    name: 'Amadou Tely',
-    profileImg: `../../images/242340565_1746587375539262_2303448769995963116_n.jpg`,
-    storyImage: `../../images/243764467_1756240981240568_5829903354009463907_n.jpg`,
-  },
-  {
-    id: 2,
-    name: 'Sow Issagha',
-    profileImg: `../../images/20429681_683098385219482_7119833471420925375_n.jpg`,
-    storyImage: `../../images/244064726_1713941435468500_4255253052009114782_n.jpg`,
-  },
-  {
-    id: 3,
-    name: 'Abdoul Karim',
-    profileImg: `../../images/163561675_2859409790937850_3527660058315715255_n.jpg`,
-    storyImage: `../../images/244231954_3001452930066868_3794428661372530268_n.jpg`,
-  },
-  {
-    id: 4,
-    name: 'Ramadan Diallo',
-    profileImg: `../../images/241878927_904161993830478_3687540142760326231_n.jpg`,
-    storyImage: `../../images/243547629_916167285963282_5299692049311410284_n.jpg`,
-  },
-  {
-    id: 5,
-    name: 'Mariama Bah',
-    profileImg: `../../images/145708082_3330471897058188_4385192478233212502_n.jpg`,
-    storyImage: `../../images/243921290_4012850388820332_1050396025967561108_n.jpg`,
-  },
-  {
-    id: 6,
-    name: 'Adama Hawa Barry',
-    profileImg: `../../images/242581486_563370205090053_8742927191673567679_n.jpg`,
-    storyImage: `../../images/244371300_570175854409488_7198649386015859816_n.jpg`,
-  },
-  {
-    id: 7,
-    name: 'Oury Tarran Jallow',
-    profileImg: `../../images/202200483_3848826991894168_7382105905782509595_n.jpg`,
-    storyImage: `../../images/243992213_4158170887626442_7759809070268579412_n.jpg`,
-  },
-  {
-    id: 8,
-    name: 'Ibrahima Sory Diané',
-    profileImg: `../../images/243167505_4183122568481443_1881507701987262539_n.jpg`,
-    storyImage: `../../images/244061868_4200843160042717_4036558810663011530_n.jpg`,
-  },
-  {
-    id: 9,
-    name: 'Liouxa Xaliou',
-    profileImg: `../../images/213885551_3396119500614698_4045920386867883878_n.jpg`,
-    storyImage: `../../images/243615094_3466781346881846_8000507893310659277_n.jpg`,
-  },
-  {
-    id: 10,
-    name: 'Ibrahima Issa Diallo',
-    profileImg: `../../images/186037488_2924624531118918_4439914589093916999_n.jpg`,
-    storyImage: `../../images/244361609_3047246475523389_4228151016554178690_n.jpg`,
-  },
-  {
-    id: 11,
-    name: 'Lamine Barry',
-    profileImg: `../../images/236076749_2048814595272903_1930801971176022854_n.jpg`,
-    storyImage: `../../images/243879603_2087589438062085_699281704491321278_n.jpg`,
-  },
-  {
-    id: 12,
-    name: 'Minkael Diallo',
-    profileImg: `../../images/241510062_4281105218637029_3968939733603552938_n.jpg`,
-    storyImage: `../../images/244103253_4366364436777773_4441191112120533777_n.jpg`,
-  },
-  {
-    id: 13,
-    name: 'Bastos Ibrahima Kindy',
-    profileImg: `../../images/214835308_3099719000352948_5933918166019080015_n.jpg`,
-    storyImage: `../../images/243648283_3151471745177673_8485981416065894863_n.jpg`,
-  },
-  {
-    id: 14,
-    name: 'Karim Benzema',
-    profileImg: `../../images/197494218_338761560942243_130096358275316303_n.jpg`,
-    storyImage: `../../images/244341202_414756746676057_4086925592276643520_n.jpg`,
-  },
-  {
-    id: 15,
-    name: 'Football.fr',
-    profileImg: `../../images/12208449_10153801698838783_4868264509219059082_n.png`,
-    storyImage: `../../images/244202625_10160037843363783_2451032290510906713_n.jpg`,
-  },
-  {
-    id: 16,
-    name: 'Adama Hawa Barry',
-    profileImg: `../../images/171280513_300954124727579_4739714293798299815_n.jpg`,
-    storyImage: `../../images/240664424_412635160226141_1892096083714688421_n.jpg`,
-  },
-  {
-    id: 17,
-    name: 'Adama Hawa Barry',
-    profileImg: `../../images/94377508_918638458565635_5520442085410340864_n.png`,
-    storyImage: `../../images/243921775_1305219969907480_7825956203732008049_n.jpg`,
-  },
-];
-
-const posts = [
-  {
-    id: 1,
-    content: `Elle n'a plus le temps <br />
-    Tu es juste 👌👌 ma tokis
-    <button  type="button" className="text-primary-300 focus:outline-none">Rougui Mo Hadja Binta</button> ❤️❤️`,
-    photos: [
-      '../../images/243590581_137412611945387_5545834831950766863_n.jpg',
-      '../../images/243590613_137412618612053_660661076792563559_n.jpg',
-    ],
-    user: {
-      name: 'Roughaya Jallow',
-      imgProfil: '../../../../images/233154272_364326375228180_5723770479990960621_n.jpg',
-    },
-  },
-  {
-    id: 2,
-    content: `Petit conseil: ne cliquez jamais sur un lien inconnu reçu Inbox sur Messenger ou WhatsApp. Surtout s'il est envoyé par un inconnu. En général, il faut se méfier des liens, ils sont souvent porteurs de virus ou représentent de dangereux chevaux de Troie pour prendre le contrôle de votre compte Facebook par exemple. Awa.`,
-    photos: [],
-    user: {
-      name: 'Alimou Sow',
-      imgProfil: '../../../../images/71043531_2768332406532037_4701645388342362112_n.jpg',
-    },
-  },
-  {
-    id: 3,
-    content: `Toute la Guinée est heureuse, à l'exception d'une seule personne. <br/> #Kikala 😅`,
-    photos: [],
-    user: {
-      name: 'Alimou Sow',
-      imgProfil: '../../../../images/71043531_2768332406532037_4701645388342362112_n.jpg',
-    },
-  }
-]
-
-function App() {
+export default function App () {
   return (
-    <div>
-      <header className="px-4 py-2 flex items-center space-x-4 bg-primary-500">
+    <div className="bg-secondary-300">
+      {/* Header Mobile Page */}
+      <header className="xl:hidden px-4 py-2 flex items-center space-x-4 bg-primary-500">
         <div className="">
           <UserCircleIcon 
             className="text-white w-6 h-6"
@@ -180,6 +54,7 @@ function App() {
         </div>
       </header>
 
+      {/* Navigation Page */}
       <Nav>
         {navDimensionStyle.map((item, key) => (
           <NavItem
@@ -191,18 +66,21 @@ function App() {
         ))}
       </Nav>
     
+      {/* Form to create post on mobile terminal */}
       <FormWhatWouldYouSay
+        styleContainer="mt-0.5 bg-white xl:hidden"
       />
 
+      {/* Stories */}
       <Stories
-        className="mt-2 pb-3 bg-white px-2 overflow-x-auto"
+        className="mt-2 pb-3 bg-white xl:bg-transparent px-2 overflow-x-auto xl:hidden"
       >
         <div className="flex items-center space-x-2">
           <StoryForm
             story={{
               id: null,
-              name: 'Ajouter à la story',
               profileImg: null,
+              name: 'Créer une story',
               storyImage: 'https://scontent.fdkr3-1.fna.fbcdn.net/v/t1.6435-9/164138734_110378421139999_7798075979519869159_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFqK6nG_fftUF3cWzUPCkZtyQ8TjlV_SMDJDxOOVX9IwJtiaAxta2SPgZiGBrBbiRrHGfAMSjHeTHUyZ7NhUJUR&_nc_ohc=Hu6ECKCMtR8AX9lFBxN&_nc_ht=scontent.fdkr3-1.fna&oh=e1b291845aaabe1f006eec30fd3d9277&oe=617D96A9'
             }}
           />
@@ -217,7 +95,139 @@ function App() {
         </div>
       </Stories>
 
-      <Posts>
+      {/* Layout */}
+      <Layout
+        className="w-full hidden xl:flex items-start justify-between px-1"
+        leftComponent={
+          <FixedSidbar>
+            {sidbarData.map((item, key) => (
+              <a
+                key={key}
+                href="https://madioubah.herokuapp.com"
+                className={
+                  classNames(
+                    `w-full px-1 mx-2 py-2 flex items-center rounded overflow-x-hidden hover:bg-secondary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-4`
+                  )
+                }
+              >
+                <div className="w-10 h-10">
+                  <img
+                    alt={item.logo}
+                    src={item.logo}
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <h6 className="ml-2 font-semibold text-gray-700">
+                  {capitalizeFirstLetter(item.title)}
+                </h6>
+              </a>
+            ))}
+          </FixedSidbar>
+        }
+        centerComponent={
+          <>
+            <Stories
+              className="px-2 xl:px-0 py-6 bg-white xl:bg-transparent overflow-x-hidden hidden xl:block"
+            >
+              <div className="flex items-center space-x-2">
+                <StoryForm
+                  story={{
+                    id: null,
+                    profileImg: null,
+                    name: 'Créer une story',
+                    storyImage: 'https://scontent.fdkr3-1.fna.fbcdn.net/v/t1.6435-9/164138734_110378421139999_7798075979519869159_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFqK6nG_fftUF3cWzUPCkZtyQ8TjlV_SMDJDxOOVX9IwJtiaAxta2SPgZiGBrBbiRrHGfAMSjHeTHUyZ7NhUJUR&_nc_ohc=Hu6ECKCMtR8AX9lFBxN&_nc_ht=scontent.fdkr3-1.fna&oh=e1b291845aaabe1f006eec30fd3d9277&oe=617D96A9'
+                  }}
+                />
+
+                {storiesData.map(story => (
+                  <StoryItem
+                    key={story.id}
+                    story={story}
+                    className="space-x-2"
+                  />
+                ))}
+              </div>
+            </Stories>
+            
+            <FormWhatWouldYouSay
+              styleContainer="bg-white rounded-lg shadow"
+            />
+            
+            <Salons
+              styleContainer="flex items-center justify-center h-16 space-x-2 overflow-hidden w-full my-4 bg-white rounded-lg"
+            >
+              <div className="flex justify-center items-center w-60">
+                <ButtonCreateSalon
+                  className="inline-block"
+                />
+              </div>
+
+              <div className="w-full h-full flex space-x-4 overflow-hidden">
+                {users.map((user, key) => (
+                  <SalongItem
+                    key={key}
+                    user={user}
+                  />
+                ))}
+              </div>
+            </Salons>
+
+            <Posts className="hidden xl:block mt-3">
+              {posts.map((post, key) => (
+                <PostItem
+                  key={key}
+                  post={post}
+                  className="bg-white shadow rounded-lg my-4 py-3"
+                />
+              ))}
+            </Posts>
+          </>
+        }
+        rightComponent={
+          <FixedSidbar>
+            <div className="px-2 flex justify-between items-center pb-4">
+              <h6 className="text-gray-600 font-semibold">Contacts</h6>
+              
+              <div className="flex items-center space-x-4 text-gray-600">
+                <VideoCameraIcon
+                  className="w-5 h-5"
+                />
+                <SearchIconOutline
+                  className="w-4 h-4"
+                />
+                <DotsHorizontalIcon
+                  className="w-5 h-5"
+                />
+              </div>
+            </div>
+
+            {users.map(({ name, src }, key) => (
+              <button
+                key={key}
+                className={classNames(`px-2 py-2 w-full flex items-center rounded hover:bg-secondary-600`)}
+              >
+                <ImageProfileUser
+                  src={src}
+                  widthClass="w-8"
+                  heightCLass="h-8"
+                  
+                  widthClassDot = 'w-1.5'
+                  heightClassDot = 'h-1.5'
+                  hasStory={key % 7 === 0}
+                  widthClassContainer = 'w-2.5'
+                  heightClassContainer = 'h-2.5'
+                />
+
+                <h6 className="truncate ml-2 font-semibold text-gray-700">
+                  {capitalizeFirstLetter(name)}
+                </h6>
+              </button>
+            ))}
+          </FixedSidbar>
+        }
+      />
+
+      <Posts className="xl:hidden">
         {posts.map((post, key) => (
           <PostItem
             key={key}
@@ -226,8 +236,14 @@ function App() {
           />
         ))}
       </Posts>
+      
+      <div className="hidden xl:block">
+        {usersInConversation.map(({ className, component }, key) => (
+          <FloatingButtonMakeMessage key={key} className={classNames(className, 'right-5')}>
+            {component}
+          </FloatingButtonMakeMessage>  
+        ))}
+      </div>
     </div>
   );
 }
-
-export default App;

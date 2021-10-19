@@ -1,22 +1,23 @@
-import React from 'react';
+import { classNames } from './helper';
 
 export function FbIcon ({
   notificationCount,
+  classNameSize = "w-5 h-5",
   backgroundSize = '25px 1171px',
   backgroundPosition = '0 -155px',
-  className = "relative z-20 bg-no-repeat w-5 h-5",
+  backgroundUrl = 'https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/nsNbresn0Ii.png',
 }: any) {
     return (
       <div
-        className={className}
+        className={classNames('relative z-20 inline-block bg-no-repeat', classNameSize)}
         style={{
           backgroundSize,
           backgroundPosition,
-          backgroundImage: `url("https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/nsNbresn0Ii.png")`,
+          backgroundImage: `url(${backgroundUrl})`,
         }}
       >
         {notificationCount && (
-          <div className="absolute -top-1.5 -right-4 z-20 flex items-center justify-center w-5 h-5 text-white rounded-full bg-red-500">
+          <div className={classNames('absolute -top-1.5 -right-4 z-20 flex items-center justify-center text-white rounded-full bg-red-500', classNameSize)}>
             {notificationCount}
           </div>
         )}
