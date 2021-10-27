@@ -2,16 +2,13 @@ import { classNames } from "./helper"
 
 export function FloatingButtonMakeMessage ({ children, className, ...rest }: any) {
     return (
-        <div
-            {...rest}
-            className={classNames('fixed', className)}
-            >
+        <button {...rest} type="button" className={classNames('fixed focus:outline-none', className)}>
             <div
-                className="flex items-center justify-center w-14 h-14 rounded-full bg-white text-gray-900"
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-white text-gray-900 shadow-xl"
             >
                 {children}
             </div>
-        </div>
+        </button>
     )
 }
 

@@ -1,20 +1,19 @@
-import React from 'react';
 import { PlusIcon } from '@heroicons/react/solid';
 
 export default function StoryItem({ className, story }: any) {
     return (
         <div className={className}>
             <div className="relative w-24 xl:w-28 h-40 xl:h-48 transition-all ease-in duration-500">
-                <button className="absolute top-4 left-2">
-                    {story.profileImg ? (
+                <button className="absolute top-4 left-2 focus:outline-none">
+                    {story.profileImg && (
                         <div className="w-9 h-9 rounded-full">
                             <img
                                 alt={story.profileImg}
                                 src={story.profileImg}
-                                className="object-cover w-full h-full rounded-full ring-4 ring-primary-300"
+                                className="object-cover w-full h-full rounded-full ring-4 ring-defaultcolor-500"
                             />
                         </div>
-                    ) : null}
+                    )}
                 </button>
 
                 {story.profileImg ? (

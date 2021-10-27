@@ -4,7 +4,6 @@ export default function Layout ({
     centerComponent,
     leftComponentClass = "w-1/5",
     rightComponentClass = "w-1/5",
-    centerComponentClass = "w-3/7",
     className = 'flex justify-between items-center',
     ...rest
 }: any) {
@@ -14,7 +13,7 @@ export default function Layout ({
                 {leftComponent}
             </div>
 
-            <div className={centerComponentClass}>
+            <div style={{ width: '45.45%' }}>
                 {centerComponent}
             </div>
             

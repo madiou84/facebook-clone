@@ -1,8 +1,3 @@
-import {  PencilAltIcon } from '@heroicons/react/outline';
-
-import { ImageProfileUser } from '../Shared';
-
-
 export const navDimensionStyle = [
     '0 -743px',
     '0 -470px',
@@ -226,20 +221,20 @@ export const users = [
     src: 'https://scontent.fdkr3-1.fna.fbcdn.net/v/t1.6435-1/cp0/s40x40/213607849_2858360291090858_6237210887753245921_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeG2xT2PX71nCTkBisnFwtfA7iz7ZhtJsyPuLPtmG0mzI0l4EgElYnoybPggGa70JL518dKqoax_Ta1ohdNsIYGX&_nc_ohc=HW9Z9z7mb_IAX-RjtOu&_nc_ht=scontent.fdkr3-1.fna&oh=aaa8871d7ce3a8fe0e3ea2e9bfb337f9&oe=6193599A',
 },
 {
-    name: 'Marwane Jjallow',
-    src: 'https://scontent.fdkr3-1.fna.fbcdn.net/v/t1.6435-1/cp0/p40x40/67508546_1355547327925581_7546746881875902464_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeFtSM5kVSrJczb13KUJtg_Plq57yUIz9CmWrnvJQjP0KagRFSt6etgsQPCijDPYpoxoq1qEh9N_qiGLbk0couiJ&_nc_ohc=bRNQ4YWGEWEAX9BuiI1&_nc_ht=scontent.fdkr3-1.fna&oh=e5a1f6ae7ce8ca171f499a746b76c98a&oe=618FD559',
-},
-{
-    name: 'Hadja Assi Diallo',
-    src: 'https://scontent.fdkr3-1.fna.fbcdn.net/v/t39.30808-1/cp0/p40x40/244411263_3697589433799582_4179777541506001180_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeED0WRXL9D3prZCTTZ5ddOa6fxYyXcf1ZXp_FjJdx_VlYCF5JLXvResunYdSgPvhVbzvVqGctxBOFRuIxVh03Js&_nc_ohc=K4L5fhphCHoAX-01eXq&_nc_ht=scontent.fdkr3-1.fna&oh=84865c98e191f9c785613ac95e23eb07&oe=61704CAA',
-},
-{
     name: 'Harouna Diallo',
     src: 'https://scontent.fdkr3-1.fna.fbcdn.net/v/t1.6435-1/cp0/p40x40/170560296_1798929373611679_9101331927310180007_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeHBwT2mn3Ub8KUJFipAGyEnWvU89mGiVzBa9Tz2YaJXMHCv0MtVatXrgAqsh221g64K5E2h9AD6yOMMia82XGj4&_nc_ohc=qQdJWw1wUS8AX-EdpkO&_nc_ht=scontent.fdkr3-1.fna&oh=e811f7f7172705a9c7750c43db95205b&oe=619084A3',
 },
 {
-    name: 'Mus Tafa',
-    src: 'https://scontent.fdkr3-1.fna.fbcdn.net/v/t39.30808-1/cp0/p40x40/234272204_4214035242018720_5121486100771698154_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeGt2X61h3UfWcOhLDlb3kUHStZO-owGFm9K1k76jAYWb-KcMWQ5DR4jYdZq2oiAzwUArQkx5KfLRLG4be4S8WlK&_nc_ohc=ULqAw83_Ji8AX8ghVxB&_nc_ht=scontent.fdkr3-1.fna&oh=1ccae0f37ee81543a1755a9efc22eff6&oe=6171923D',
+    name: 'Marwane Jjallow',
+    src: 'https://scontent.fdkr3-1.fna.fbcdn.net/v/t1.6435-1/cp0/p40x40/67508546_1355547327925581_7546746881875902464_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeFtSM5kVSrJczb13KUJtg_Plq57yUIz9CmWrnvJQjP0KagRFSt6etgsQPCijDPYpoxoq1qEh9N_qiGLbk0couiJ&_nc_ohc=bRNQ4YWGEWEAX9BuiI1&_nc_ht=scontent.fdkr3-1.fna&oh=e5a1f6ae7ce8ca171f499a746b76c98a&oe=618FD559',
+},
+{
+    name: 'Idiatou Diallo',
+    src: 'https://scontent.fdkr3-1.fna.fbcdn.net/v/t1.6435-9/119746548_1391181807756615_1391466379042147437_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeE86jUse0GY-kPvOh25goH5aVYFy8QeCBhpVgXLxB4IGFsTxRGhLpjrqf1I5P7Hks1JAv5Nkgu0_2Ju5ZZGf0Ui&_nc_ohc=uIjPn-sRJqIAX9Q68cs&_nc_ht=scontent.fdkr3-1.fna&oh=c5cb01dc56c37365bdf04382dfaccafa&oe=619C0427',
+},
+{
+    name: 'Tahirou Kadi Baldet',
+    src: 'https://scontent.fdkr3-1.fna.fbcdn.net/v/t1.6435-1/c0.0.100.100a/p100x100/125270121_1308803629465884_4314461455530527621_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeGPchr-mD7kEtzJEmtc9UYs3AuyIWUgfQzcC7IhZSB9DNjN3P_pgqivv9WLavzfrzFtw3rE4znbGpggnNkFfpvq&_nc_ohc=-QUJbl79jxcAX_vfglT&_nc_oc=AQnBsvLT_aE1P7UpaavngwVp-RUcwh-_gn1lIR86tFwWAbPCtv70KNmGW9f0ufPEe8I&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fdkr3-1.fna&oh=86c8d6b589fbecbcb5416edf6269ca1b&oe=619BD1B2',
 },
 {
     name: 'Lamine Barry',
@@ -344,42 +339,18 @@ export const sidbarData = [
   
 export const usersInConversation = [
     {
+        name: 'Amdoury Breezy',
         className: 'bottom-52',
-        component: <ImageProfileUser
-            hasStory={false}
-            src="https://scontent.fdkr3-1.fna.fbcdn.net/v/t39.30808-1/p100x100/246413414_3061824357398934_8904850250753022316_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeFDDDfRGVG0v9irhUBn-T6xrcWT9v_uOuGtxZP2_-464eTRjTQb_bMU8xzFsr3_5shXxjuZ5zgYTD_27qyJviSt&_nc_ohc=WJbSkbOMoYcAX-9dRNW&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fdkr3-1.fna&oh=c946c5b9f1b01e2c3cceee810dc5da88&oe=61728A83"
-            widthClass="w-14"
-            heightCLass="h-14"
-            widthClassDot='w-3'
-            heightClassDot='h-3'
-        />
+        src:"https://scontent.fdkr3-1.fna.fbcdn.net/v/t1.6435-1/p100x100/82541167_2699305243510482_5271575840440713216_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeH6wxR3GOCQuuFyihycqrYXLUECKYDYYQ0tQQIpgNhhDXwvV4e5CxfDCLlDe781Q7_ycxUokxdEdIeI3igkyZB1&_nc_ohc=45GhyTgGhbsAX-NTAAD&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fdkr3-1.fna&oh=2aa3fbe17b4cf481926b61df314dda47&oe=6199A2A5",
     },
     {
+        name: 'Roughaya Jallow',
         className: 'bottom-36',
-        component: <ImageProfileUser
-        hasStory={false}
-        src="https://scontent.fdkr3-1.fna.fbcdn.net/v/t1.6435-1/p100x100/233154272_364326375228180_5723770479990960621_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeGGiyUtIxNzRiO1krqAdtrAIazneDS_AQ0hrOd4NL8BDX5uzPHn_IXmY0XEBL1bPBeq3a99dDMi_F8_ik2N4qfJ&_nc_ohc=PCN9v5xyiMIAX-tbsWW&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fdkr3-1.fna&oh=f18e36818768bb5d8f77c26a83b80c37&oe=61953950"
-        widthClass="w-14"
-        heightCLass="h-14"
-        widthClassDot='w-3'
-        heightClassDot='h-3'
-        />
+        src:"https://scontent.fdkr3-1.fna.fbcdn.net/v/t1.6435-1/p100x100/233154272_364326375228180_5723770479990960621_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeGGiyUtIxNzRiO1krqAdtrAIazneDS_AQ0hrOd4NL8BDX5uzPHn_IXmY0XEBL1bPBeq3a99dDMi_F8_ik2N4qfJ&_nc_ohc=PCN9v5xyiMIAX-tbsWW&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fdkr3-1.fna&oh=f18e36818768bb5d8f77c26a83b80c37&oe=61953950",
     },
     {
+        name: 'Saïkou Bah',
         className: 'bottom-20',
-        component: <ImageProfileUser
-            hasStory={false}
-            src="https://scontent.fdkr3-1.fna.fbcdn.net/v/t1.6435-1/p100x100/192039023_1565284050344847_6471514319054447771_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeFUWgw3yXQ2uBbtaDUAOsm-ZnNI0APp45Vmc0jQA-njlUbmbWQ71h5RQDMP4LKchGiRD6BHBjuKD3J7mHVHRzCE&_nc_ohc=-zNJIAaK5s4AX_fyibu&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fdkr3-1.fna&oh=5063d1686e3dcdd5518ad49e29855a55&oe=61958ADF"
-            widthClass="w-14"
-            heightCLass="h-14"
-            widthClassDot='w-3'
-            heightClassDot='h-3'
-        />
-    },
-    {
-        className: 'bottom-4',
-        component: <PencilAltIcon
-            className="w-8 h-8"
-        />
+        src:"https://scontent.fdkr3-1.fna.fbcdn.net/v/t1.6435-1/p100x100/192039023_1565284050344847_6471514319054447771_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeFUWgw3yXQ2uBbtaDUAOsm-ZnNI0APp45Vmc0jQA-njlUbmbWQ71h5RQDMP4LKchGiRD6BHBjuKD3J7mHVHRzCE&_nc_ohc=-zNJIAaK5s4AX_fyibu&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fdkr3-1.fna&oh=5063d1686e3dcdd5518ad49e29855a55&oe=61958ADF",
     }
 ]

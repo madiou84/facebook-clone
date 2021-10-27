@@ -1,5 +1,6 @@
-import { UserCircleIcon, SearchIcon, VideoCameraIcon } from '@heroicons/react/solid';
+import { useState } from 'react';
 import { SearchIcon as SearchIconOutline, DotsHorizontalIcon } from '@heroicons/react/outline';
+import { PencilAltIcon, UserCircleIcon, SearchIcon, VideoCameraIcon } from '@heroicons/react/solid';
 
 import {
   Nav,
@@ -17,6 +18,7 @@ import {
   ImageProfileUser,
   ButtonCreateSalon,
   FormWhatWouldYouSay,
+  WindowConversationBottom,
   FloatingButtonMakeMessage,
 } from '../../Shared';
 import {
@@ -25,10 +27,19 @@ import {
   sidbarData,
   storiesData,
   navDimensionStyle,
-  usersInConversation } from '../../utils';
-import { capitalizeFirstLetter, classNames } from '../../Shared/helper';
+  usersInConversation
+} from '../../utils';
+import {
+  classNames,
+  capitalizeFirstLetter,
+} from '../../Shared/helper';
 
 export default function App () {
+  const [conversationWindow, setConversationWindow] = useState({
+    data: null || {},
+    isOpen: false,
+  });
+
   return (
     <div className="bg-secondary-300">
       {/* Header Mobile Page */}
@@ -204,21 +215,22 @@ export default function App () {
             {users.map(({ name, src }, key) => (
               <button
                 key={key}
-                className={classNames(`px-2 py-2 w-full flex items-center rounded hover:bg-secondary-600`)}
+                className={
+                  classNames(`px-2 py-2 space-x-4 w-full flex items-center rounded hover:bg-secondary-400 focus:outline-none`)
+                }
               >
                 <ImageProfileUser
                   src={src}
                   widthClass="w-8"
                   heightCLass="h-8"
-                  
-                  widthClassDot = 'w-1.5'
-                  heightClassDot = 'h-1.5'
-                  hasStory={key % 7 === 0}
-                  widthClassContainer = 'w-2.5'
-                  heightClassContainer = 'h-2.5'
+                  widthClassDot = "w-1.5"
+                  heightClassDot = "h-1.5"
+                  hasStory={key % 5 === 0}
+                  widthClassContainer = "w-2.5"
+                  heightClassContainer = "h-2.5"
                 />
 
-                <h6 className="truncate ml-2 font-semibold text-gray-700">
+                <h6 className="truncate font-semibold text-gray-700">
                   {capitalizeFirstLetter(name)}
                 </h6>
               </button>
@@ -236,13 +248,40 @@ export default function App () {
           />
         ))}
       </Posts>
+
+      {conversationWindow.isOpen && (
+        <WindowConversationBottom
+          positionRight='right-20'
+          user={conversationWindow.data}
+          onClickMinus={() => setConversationWindow(prevState => ({ ...prevState, isOpen: false }))}
+          onClickClose={() => setConversationWindow(prevState => ({ ...prevState, isOpen: false }))}
+        />
+      )}
       
       <div className="hidden xl:block">
-        {usersInConversation.map(({ className, component }, key) => (
-          <FloatingButtonMakeMessage key={key} className={classNames(className, 'right-5')}>
-            {component}
-          </FloatingButtonMakeMessage>  
-        ))}
+        {usersInConversation.map(({ className, src, name }, key) => {
+          return (
+            <div key={key}>
+              <FloatingButtonMakeMessage
+                className={classNames( className, 'right-4' )}
+                onClick={() => setConversationWindow(prevState => ({ ...prevState, isOpen: true, data: { name, src } }))}
+              >
+                <ImageProfileUser
+                  src={src}
+                  hasStory={false}
+                  widthClass="w-12"
+                  heightCLass="h-12"
+                  widthClassDot='w-3'
+                  heightClassDot='h-3'
+                />
+              </FloatingButtonMakeMessage>
+              
+              <FloatingButtonMakeMessage className="bottom-4 right-4">
+                <PencilAltIcon className="w-6 h-6" />
+              </FloatingButtonMakeMessage>
+            </div>
+          )
+        })}
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ import { ImageProfileUser } from '../ImageProfileUser';
 export default function PostItem({ post, className, ...rest }: any) {
     return (
         <div className={className} {...rest}>
-            <div className="flex items-center justify-between px-4">
+            <div className="flex items-center justify-between px-2 xl:px-4">
                 <div className="flex items-center">
                     <div className="mr-2">
                         <ImageProfileUser
@@ -23,6 +23,7 @@ export default function PostItem({ post, className, ...rest }: any) {
                         <h2 className="font-bold">
                             {post.user.name}
                         </h2>
+                        
                         <div className="space-x-2 text-sm text-gray-400 leading-none">
                             <span>3 min</span>
                             <UserGroupIcon
@@ -38,7 +39,7 @@ export default function PostItem({ post, className, ...rest }: any) {
             </div>
 
             <p
-                className="px-4 pt-2 pb-2 font-sans leading-tight"
+                className="px-2 xl:px-4 pt-2 pb-2 font-sans leading-tight"
                 dangerouslySetInnerHTML={{__html: post.content}}
             />
 

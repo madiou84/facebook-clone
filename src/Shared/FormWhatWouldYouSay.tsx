@@ -1,8 +1,8 @@
-import React from 'react'
-import { PhotographIcon, ThumbUpIcon } from '@heroicons/react/outline'
-import { PhotographIcon as PhotographIconSolid, VideoCameraIcon } from '@heroicons/react/solid'
+import { ThumbUpIcon } from '@heroicons/react/outline';
+import { PhotographIcon as PhotographIconSolid, VideoCameraIcon } from '@heroicons/react/solid';
 
-import { FbIcon } from "../Shared";
+import { FbIcon } from "./index";
+
 const createFormActions = [
     {
         iconSize: 'auto',
@@ -44,8 +44,6 @@ export default function FormWhatWouldYouSay({ styleContainer = '', ...rest } : a
                 <div className="w-full">
                     <form>
                         <input
-                            id=""
-                            name=""
                             type="text"
                             placeholder="Quoi de neuf Madiou ?"
                             className="px-4 w-full h-8 xl:h-9 rounded-full border border-gray-200 xl:placeholder-gray-700 xl:bg-secondary-300 focus:outline-none focus:ring-primary-500 focus:ring-2 focus:ring-offset-4 transition-all duration-200 ease-in"
@@ -54,11 +52,12 @@ export default function FormWhatWouldYouSay({ styleContainer = '', ...rest } : a
                 </div>
 
                 <div className="xl:hidden">
-                    <div className="w-10 h-10">
-                        <PhotographIcon
-                            className="text-defaultcolor-500"
-                        />
-                    </div>
+                    <FbIcon
+                        classNameSize="w-6 h-6"
+                        backgroundSize="25px 1184px"
+                        backgroundPosition="0 -25px"
+                        backgroundUrl="https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/k3BKMWO4lFg.png"
+                    />
                 </div>
             </div>
 

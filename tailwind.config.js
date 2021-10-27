@@ -46,6 +46,10 @@ module.exports = {
       },
       width: {
         '3/7': '46%',
+      },
+      height: {
+        'h-93': '22rem',
+        'max-h-93': '22rem',
       }
     },
   },
