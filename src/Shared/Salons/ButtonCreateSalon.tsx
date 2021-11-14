@@ -7,7 +7,7 @@ export default function ButtonCreateSalon ({ className }: any) {
             type="button"
             className={
                 classNames(
-                    'w-full px-3 py-2 flex justify-center items-center border border-opacity-30 border-primary-200 text-indigo-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-200 ease-in',
+                    'w-40 px-2 py-2 flex justify-center items-center border border-opacity-30 border-primary-200 text-indigo-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-200 ease-in',
                     className
                 )
             }

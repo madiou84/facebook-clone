@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { ThumbUpIcon } from '@heroicons/react/outline';
 import { PhotographIcon as PhotographIconSolid, VideoCameraIcon } from '@heroicons/react/solid';
 
+import Modal from './Modal';
 import { FbIcon } from "./index";
+import ImageProfileUser from './ImgProfileUser';
 
 const createFormActions = [
     {
@@ -28,25 +31,29 @@ const createFormActions = [
 ]
 
 export default function FormWhatWouldYouSay({ styleContainer = '', ...rest } : any) {
+    let [isOpen, setIsOpen] = useState(false);
+
+    const handleOnFocus = () => setIsOpen(true);
+
     return (
         <div className={styleContainer} {...rest}>
             <div className="flex items-center px-3 py-2 space-x-2">
                 <div className="">
                     <div className="w-10 h-10">
-                        <img
-                            alt=""
+                        <ImageProfileUser
                             className="w-full h-full object-cover rounded-full"
-                            src="https://scontent.fdkr3-1.fna.fbcdn.net/v/t1.6435-9/164138734_110378421139999_7798075979519869159_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFqK6nG_fftUF3cWzUPCkZtyQ8TjlV_SMDJDxOOVX9IwJtiaAxta2SPgZiGBrBbiRrHGfAMSjHeTHUyZ7NhUJUR&_nc_ohc=Hu6ECKCMtR8AX9lFBxN&_nc_ht=scontent.fdkr3-1.fna&oh=e1b291845aaabe1f006eec30fd3d9277&oe=617D96A9"
                         />
                     </div>
                 </div>
 
                 <div className="w-full">
                     <form>
+                        {isOpen && <Modal isOpen={isOpen} setIsOpen={setIsOpen} />}
                         <input
                             type="text"
+                            onClick={handleOnFocus}
                             placeholder="Quoi de neuf Madiou ?"
-                            className="px-4 w-full h-8 xl:h-9 rounded-full border border-gray-200 xl:placeholder-gray-700 xl:bg-secondary-300 focus:outline-none focus:ring-primary-500 focus:ring-2 focus:ring-offset-4 transition-all duration-200 ease-in"
+                            className="px-4 w-full h-8 xl:h-9 rounded-full border border-gray-200 xl:placeholder-gray-700 xl:bg-secondary-300 transition-all duration-200 ease-in focus:outline-none"
                         />
                     </form>
                 </div>

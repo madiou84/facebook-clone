@@ -1,5 +1,7 @@
 import { PlusIcon } from '@heroicons/react/solid';
 
+import ImageProfileUser from '../ImgProfileUser';
+
 export default function StoryItem({ className, story }: any) {
     return (
         <div className={className}>
@@ -7,7 +9,7 @@ export default function StoryItem({ className, story }: any) {
                 <button className="absolute top-4 left-2 focus:outline-none">
                     {story.profileImg && (
                         <div className="w-9 h-9 rounded-full">
-                            <img
+                            <ImageProfileUser
                                 alt={story.profileImg}
                                 src={story.profileImg}
                                 className="object-cover w-full h-full rounded-full ring-4 ring-defaultcolor-500"
@@ -18,7 +20,7 @@ export default function StoryItem({ className, story }: any) {
 
                 {story.profileImg ? (
                     <div className="w-full h-full">
-                        <img
+                        <ImageProfileUser
                             alt={story.storyImage}
                             src={story.storyImage}
                             className="object-cover w-full h-full rounded-xl"
@@ -31,9 +33,7 @@ export default function StoryItem({ className, story }: any) {
                     </div>
                 ) : (
                     <div className="w-full h-full">
-                        <img
-                            src={story.storyImage}
-                            alt={story.storyImage}
+                        <ImageProfileUser
                             className="h-2/3 object-cover w-full rounded-t-xl"
                         />
                         <div className="h-2/6 relative bg-white rounded-b-xl">

@@ -4,6 +4,7 @@ import { SearchIcon, UsersIcon, PlayIcon, BriefcaseIcon, ArchiveIcon } from '@he
 
 import { FbIcon } from '../../Shared';
 import { classNames } from '../helper';
+import ImageProfileUser from '../ImgProfileUser';
 
 export default function Nav ({ bgContainer = 'bg-white', bgSubContainer = "flex items-center justify-center", children, ...rest } : any) {
     return (
@@ -74,13 +75,9 @@ export default function Nav ({ bgContainer = 'bg-white', bgSubContainer = "flex 
                         }
                         rightComponent={
                             <div className="w-full flex items-center justify-end">
-                                <a href="https://madioubah.herokuapp.com" className="flex items-center rounded-full hover:bg-gray-100 px-1 py-1">
+                                <a href="https://madioubah.herokuapp.com" className="flex items-center rounded-full hover:bg-gray-100 mx-2 py-1">
                                     <div className="w-10 h-7 rounded-full">
-                                        <img
-                                            alt=""
-                                            className="w-full h-full rounded-full object-fill"
-                                            src="https://scontent.fdkr3-1.fna.fbcdn.net/v/t1.6435-9/164138734_110378421139999_7798075979519869159_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFqK6nG_fftUF3cWzUPCkZtyQ8TjlV_SMDJDxOOVX9IwJtiaAxta2SPgZiGBrBbiRrHGfAMSjHeTHUyZ7NhUJUR&_nc_ohc=X0S_SYd9wiIAX9qtl9J&_nc_ht=scontent.fdkr3-1.fna&oh=8421e48ecf88f9c552cc0768a2a14bf3&oe=61915D29"
-                                        />
+                                        <ImageProfileUser />
                                     </div>
 
                                     <div className="w-full relative">

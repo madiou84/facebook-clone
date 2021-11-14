@@ -92,7 +92,6 @@ export default function App () {
               id: null,
               profileImg: null,
               name: 'Créer une story',
-              storyImage: 'https://scontent.fdkr3-1.fna.fbcdn.net/v/t1.6435-9/164138734_110378421139999_7798075979519869159_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFqK6nG_fftUF3cWzUPCkZtyQ8TjlV_SMDJDxOOVX9IwJtiaAxta2SPgZiGBrBbiRrHGfAMSjHeTHUyZ7NhUJUR&_nc_ohc=Hu6ECKCMtR8AX9lFBxN&_nc_ht=scontent.fdkr3-1.fna&oh=e1b291845aaabe1f006eec30fd3d9277&oe=617D96A9'
             }}
           />
 
@@ -123,8 +122,8 @@ export default function App () {
               >
                 <div className="w-10 h-10">
                   <img
-                    alt={item.logo}
-                    src={item.logo}
+                    alt={item.src}
+                    src={item.src}
                     className="w-full h-full object-cover rounded-full"
                   />
                 </div>
