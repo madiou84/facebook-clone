@@ -7,7 +7,7 @@ You can clone it, test it to see the result, get inspiration from it or pull on 
 If you like this reproduction, please click on project star to encourage me.
 #
 ### Facebook clone Screens
-![](screenshots/presentation.gif)
+![](screenshots/presentation.png)
 
 ### Screenshots
 <img src="screenshots/xs.jpg" width="220"/> <img src="screenshots/sm.jpg" width="220"/> <img src="screenshots/md.jpg" width="220"/> <img src="screenshots/lg.jpg" width="220"/> <img src="screenshots/xl.jpg" width="220"/>
