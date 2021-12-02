@@ -10,7 +10,7 @@ If you like this reproduction, please click on project star to encourage me.
 ![](screenshots/presentation.png)
 
 ### Screenshots
-<img src="screenshots/xs.jpg" width="220"/> <img src="screenshots/sm.jpg" width="220"/> <img src="screenshots/md.jpg" width="220"/> <img src="screenshots/lg.jpg" width="220"/> <img src="screenshots/xl.jpg" width="220"/>
+<img src="screenshots/xs.jpg" width="220"/> <img src="screenshots/sm.jpg" width="220"/> <img src="screenshots/md.jpg" width="220"/> <img src="screenshots/lg.jpg" width="220"/>
 
 ## Installation
 
