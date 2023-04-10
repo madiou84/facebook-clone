@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@capacitor/android": "^4.7.3",
+    "@capacitor/cli": "^4.7.3",
+    "@capacitor/core": "^4.7.3",
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.4",
     "classnames": "^2.3.2",

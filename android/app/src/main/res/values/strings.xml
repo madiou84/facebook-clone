@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">facebook-clone</string>
+    <string name="title_activity_main">facebook-clone</string>
+    <string name="package_name">com.fbclone.app</string>
+    <string name="custom_url_scheme">com.fbclone.app</string>
+</resources>
