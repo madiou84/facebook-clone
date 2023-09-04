@@ -125,51 +125,6 @@ export const SOTRIES_DATA = [
 
 export const POSTS: PostsProps[] = [
   {
-    id: 1,
-    content: `///////////////////
-    Nouvelle série de vidéos : Un jour, un verset.
-    Jour 12, verset 2 de la Sourate AL-FATIHA. (1)
-    Tous les soirs sur nos réseaux sociaux :
-    YouTube : https://www.youtube.com/@MosqueeMirailToulouse
-    Instagram : https://www.instagram.com/mosqueemirail/
-    Facebook : https://www.facebook.com/MosqueeMirailToulouse
-    15 minutes avant l'Iftar.
-    //////////////////
-    Assalamu ´alaikumu wa rahmatullahi wa barakatuh !
-    Le mois de Ramadhan est l’occasion de mieux comprendre le Qur’an pour l’appliquer et atteindre la piété. La Mosquée du Mirail vous propose, un quart d'heure avant l'iftar, une série de vidéos, intitulée "un jour, un verset", tout au long de ce mois pour vous aider à atteindre ce but.
-    Aujourd'hui nous aborderons la deuxième partie du verset 2 de la Sourate AL-FATIHA. (1).
-    Qu’Allah nous enseigne la science utile, la révélation, et nous permette de la mettre en pratique !
-    Wassalamu ‘alaikumu wa rahmatullah !
-    #coran #ramadan #lectureducoran #apprendrelecoran #ramadan2023 #souratealbaqara #islam`,
-    photos: ["/images/339671916_3526410327605093_8657812419496388880_n.jpg"],
-    user: {
-      name: "Mosquée Mirail Toulouse",
-      imgProfil: "/images/278165300_5252356171481402_8345245658010450020_n.jpg",
-    },
-  },
-  {
-    id: 2,
-    content: `Al hamdulillah lillahi (Les louanges appartiennent toutes à Allâh)
-    _____________________________________________________
-    L'épisode est également disponible en podcast :
-    Spotify : https://open.spotify.com/show/6G35eag4qKDUY0XP2FVUBn...
-    Apple Podcasts : https://podcasts.apple.com/.../mosqu%C3%A9e.../id1653002766
-    Google Podcasts : https://podcasts.google.com/.../aHR0cHM6Ly9hbmNob3IuZm0vc...
-    Suivez-nous sur nos réseaux sociaux :
-    Facebook : https://www.facebook.com/MosqueeMirailToulouse
-    Instagram : https://www.instagram.com/mosqueemirail
-    TikTok : https://www.tiktok.com/@mosqueemirailtoulouse
-    Twitter : https://twitter.com/Mosquee_Mirail
-    Et notre site internet : https://www.mosquee-mirail-toulouse.fr`,
-    videos: [
-      "https://video-mad1-1.xx.fbcdn.net/v/t39.25447-2/339463717_159296423723157_3815672421018837089_n.mp4?_nc_cat=102&vs=dce37a3360da1f5d&_nc_vs=HBksFQAYJEdDWE9PeFNWQU1BVzRaQUFBR0VnRmNMWi1mTTBibWRqQUFBRhUAAsgBABUAGCRHQzdXTUJTSF9OaTktWVlFQU9RWTBuNkh3a1EtYnJGcUFBQUYVAgLIAQBLB4gScHJvZ3Jlc3NpdmVfcmVjaXBlATENc3Vic2FtcGxlX2ZwcwAQdm1hZl9lbmFibGVfbnN1YgAgbWVhc3VyZV9vcmlnaW5hbF9yZXNvbHV0aW9uX3NzaW0AKGNvbXB1dGVfc3NpbV9vbmx5X2F0X29yaWdpbmFsX3Jlc29sdXRpb24AHXVzZV9sYW5jem9zX2Zvcl92cW1fdXBzY2FsaW5nABFkaXNhYmxlX3Bvc3RfcHZxcwAVACUAHAAAJp668Pq37vkBFQIoAkMzGAt2dHNfcHJldmlldxwXQICxmZmZmZoYIGRhc2hfdjRfNXNlY2dvcF9ocTJfZnJhZ18yX3ZpZGVvEgAYGHZpZGVvcy52dHMuY2FsbGJhY2sucHJvZDgSVklERU9fVklFV19SRVFVRVNUGwqIFW9lbV90YXJnZXRfZW5jb2RlX3RhZwZvZXBfaGQTb2VtX3JlcXVlc3RfdGltZV9tcwEwDG9lbV9jZmdfcnVsZQd1bm11dGVkE29lbV9yb2lfcmVhY2hfY291bnQFNzE5NTMRb2VtX2lzX2V4cGVyaW1lbnQADG9lbV92aWRlb19pZA83NzQwNzkxMjA4NDIxOTASb2VtX3ZpZGVvX2Fzc2V0X2lkDzI0NzEzMzkyMTA2ODE5NRVvZW1fdmlkZW9fcmVzb3VyY2VfaWQPNTQ5NDU0MDg3MDY1MjMxHG9lbV9zb3VyY2VfdmlkZW9fZW5jb2RpbmdfaWQQMTIzMTAzNzQ5NzgwNjUyNw52dHNfcmVxdWVzdF9pZAAlAhwAJcQBGweIAXMENDE4NAJjZAoyMDIzLTA0LTAyA3JjYgU3MTkwMANhcHAGVmlkZW9zAmN0GUNPTlRBSU5FRF9QT1NUX0FUVEFDSE1FTlQTb3JpZ2luYWxfZHVyYXRpb25fcwU1MzQuMgJ0cxVwcm9ncmVzc2l2ZV9lbmNvZGluZ3MA&ccb=1-7&_nc_sid=189a0e&efg=eyJ2ZW5jb2RlX3RhZyI6Im9lcF9oZCJ9&_nc_ohc=R9W8EYZpXE8AX8NrBiu&_nc_ht=video-mad1-1.xx&oh=00_AfC14WPY9E06JhYjpDHrXpFPI2SpPxkCWSP3EwJsgo5Pjw&oe=642FBF6C&_nc_rid=798710946980907",
-    ],
-    user: {
-      name: "Mosquée Mirail Toulouse",
-      imgProfil: "/images/278165300_5252356171481402_8345245658010450020_n.jpg",
-    },
-  },
-  {
     id: 3,
     content: `Petit conseil: ne cliquez jamais sur un lien inconnu reçu Inbox sur Messenger ou WhatsApp. Surtout s'il est envoyé par un inconnu. En général, il faut se méfier des liens, ils sont souvent porteurs de virus ou représentent de dangereux chevaux de Troie pour prendre le contrôle de votre compte Facebook par exemple. Awa.`,
     photos: [],
